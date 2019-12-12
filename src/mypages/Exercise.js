@@ -1,11 +1,12 @@
 import React from 'react'
-import Card from '../mycomponents/Card'
 import Welcome from '../mycomponents/Welcome'
 import exercises from '../mocks/exercises'
+import ExercisesList from '../mycomponents/ExercisesList'
+import  AddButton  from '../mycomponents/AddButton';
 
 export default class Exercises extends React.Component {
-    constructor(propt) {
-        super(propt)
+    constructor(props) {
+        super(props)
         this.state = {
             data: exercises
         }
@@ -14,15 +15,8 @@ export default class Exercises extends React.Component {
         return (
             <div>
                 <Welcome username="Puto" />
-                {this.state.data.map((item) => {
-                    return <Card
-                        title={item.title}
-                        description={item.description}
-                        image={item.img}
-                        leftColor={item.leftColor}
-                        rigthColor={item.rightColor}
-                    />
-                })}
+                <ExercisesList exercises={this.state.data}/>
+                <AddButton />
             </div>
         )
     }

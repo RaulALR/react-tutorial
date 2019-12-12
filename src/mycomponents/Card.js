@@ -3,10 +3,6 @@ import circlesImg from '../images/circles.png'
 import './styles/Card.css'
 
 export default class Card extends React.Component {
-    constructor(props){
-        super(props)
-    }
-    
     componentDidMount(){
     }
 
@@ -20,7 +16,7 @@ export default class Card extends React.Component {
                 <div className="card-body">
                     <div className="row center">
                         <div className="col-6">
-                            <img src={image} className="float-right"/>
+                            <img src={image} className="float-right" alt=""/>
                         </div>
                         <div className="col-6 Fitness-Card-Info">
                             <h1>{title}</h1>
