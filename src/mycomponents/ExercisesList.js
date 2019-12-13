@@ -1,7 +1,7 @@
 import React from 'react'
 import Card from './Card'
 
-export default function ExerciseList(props){
+export default function ExercisesList(props){
     return (
         <div>
         {props.exercises.map((item) => {
