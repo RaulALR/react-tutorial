@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles/Welcome.css'
 
-export default function Welcome({ username }) {
+const Welcome = ({ username }) => {
     return (
         <div className="container">
             <div className="Fitness-User-Info">
@@ -11,3 +11,5 @@ export default function Welcome({ username }) {
         </div>
     )
 }
+
+export default Welcome
